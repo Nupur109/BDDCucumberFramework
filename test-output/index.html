@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Harsh\AppData\Local\Temp\testng-eclipse--228052951\testng-customsuite.xml</span>
+                    <span>C:\Users\Harsh\AppData\Local\Temp\testng-eclipse--621611172\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,36 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods, 4 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.RunnerClass" class="method navigator-link" hash-for-method="runScenario(&quot;User logout from the account created&quot;, &quot;Delete Account functionality&quot;)">runScenario("User logout from the account created", "Delete Account functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.RunnerClass" class="method navigator-link" hash-for-method="runScenario(&quot;User deletes the account created&quot;, &quot;Delete Account functionality&quot;)">runScenario("User deletes the account created", "Delete Account functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.RunnerClass" class="method navigator-link" hash-for-method="runScenario(&quot;User logins with valid details successfully&quot;, &quot;Login Account functionality&quot;)">runScenario("User logins with valid details successfully", "Login Account functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.RunnerClass" class="method navigator-link" hash-for-method="runScenario(&quot;Register a user with valid details&quot;, &quot;User registration or sign up&quot;)">runScenario("Register a user with valid details", "User registration or sign up")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +132,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="runners.RunnerClass" class="method navigator-link" hash-for-method="runScenario(&quot;Register a user with valid details&quot;, &quot;User registration or sign up&quot;)">runScenario("Register a user with valid details", "User registration or sign up")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="runners.RunnerClass" class="method navigator-link" hash-for-method="runScenario(&quot;User logins with invalid details&quot;, &quot;Login Account functionality&quot;)">runScenario("User logins with invalid details", "Login Account functionality")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -118,6 +147,82 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">runners.RunnerClass</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User logout from the account created&quot;, &quot;Delete Account functionality&quot;)">
+                  </a> <!-- runScenario("User logout from the account created", "Delete Account functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User logout from the account created","Delete Account functionality")</span>
+                  <div class="stack-trace">junit.framework.ComparisonFailure: expected:&lt;Automation Exercise[]&gt; but was:&lt;Automation Exercise[ - Signup / Login]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at stepDefinitions.loginStepDef.user_should_be_navigated_to_the_home_page(loginStepDef.java:52)
+	at ✽.User should be navigated to the homePage(file:///C:/Users/Harsh/eclipse-workspace/BDDFramework/src/test/resources/features/logout_delete.feature:8)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User deletes the account created&quot;, &quot;Delete Account functionality&quot;)">
+                  </a> <!-- runScenario("User deletes the account created", "Delete Account functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User deletes the account created","Delete Account functionality")</span>
+                  <div class="stack-trace">junit.framework.ComparisonFailure: expected:&lt;Automation Exercise[]&gt; but was:&lt;Automation Exercise[ - Signup / Login]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at stepDefinitions.loginStepDef.user_should_be_navigated_to_the_home_page(loginStepDef.java:52)
+	at ✽.User should be navigated to the homePage(file:///C:/Users/Harsh/eclipse-workspace/BDDFramework/src/test/resources/features/logout_delete.feature:8)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User logins with valid details successfully&quot;, &quot;Login Account functionality&quot;)">
+                  </a> <!-- runScenario("User logins with valid details successfully", "Login Account functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User logins with valid details successfully","Login Account functionality")</span>
+                  <div class="stack-trace">junit.framework.ComparisonFailure: expected:&lt;Automation Exercise[]&gt; but was:&lt;Automation Exercise[ - Signup / Login]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at stepDefinitions.loginStepDef.user_should_be_navigated_to_the_home_page(loginStepDef.java:52)
+	at ✽.User should be navigated to the homePage(file:///C:/Users/Harsh/eclipse-workspace/BDDFramework/src/test/resources/features/login.feature:19)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Register a user with valid details&quot;, &quot;User registration or sign up&quot;)">
+                  </a> <!-- runScenario("Register a user with valid details", "User registration or sign up") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Register a user with valid details","User registration or sign up")</span>
+                  <div class="stack-trace">junit.framework.ComparisonFailure: expected:&lt;...on Exercise - Signup[]&gt; but was:&lt;...on Exercise - Signup[ / Login]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at stepDefinitions.registerStepDef.user_should_be_on_the_signup_page(registerStepDef.java:67)
+	at ✽.User should be on the Signup page(file:///C:/Users/Harsh/eclipse-workspace/BDDFramework/src/test/resources/features/a_register.feature:9)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -126,10 +231,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Register a user with valid details&quot;, &quot;User registration or sign up&quot;)">
-                  </a> <!-- runScenario("Register a user with valid details", "User registration or sign up") -->
+                  <a name="runScenario(&quot;User logins with invalid details&quot;, &quot;Login Account functionality&quot;)">
+                  </a> <!-- runScenario("User logins with invalid details", "Login Account functionality") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Register a user with valid details","User registration or sign up")</span>
+                  <span class="parameters">("User logins with invalid details","Login Account functionality")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -139,7 +244,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Harsh\AppData\Local\Temp\testng-eclipse--228052951\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Harsh\AppData\Local\Temp\testng-eclipse--621611172\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -196,16 +301,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runners.RunnerClass')
-data.setCell(0, 3, 38588);
+data.setCell(0, 3, 15246);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'runners.RunnerClass')
+data.setCell(1, 3, 6646);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'runners.RunnerClass')
+data.setCell(2, 3, 4529);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'runners.RunnerClass')
+data.setCell(3, 3, 4337);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'runners.RunnerClass')
+data.setCell(4, 3, 3741);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 38 seconds</span>
+              <span class="suite-total-time">Total running time: 34 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -233,16 +354,40 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runners.RunnerClass</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@45cec376)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@5a97b17c)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario("Register a user with valid details", "User registration or sign up")</span>
-                <span class="method-start">2153 ms</span>
+                <span class="method-start">1633 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User logins with invalid details", "Login Account functionality")</span>
+                <span class="method-start">16899 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("User logins with valid details successfully", "Login Account functionality")</span>
+                <span class="method-start">23550 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("User logout from the account created", "Delete Account functionality")</span>
+                <span class="method-start">27301 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("User deletes the account created", "Delete Account functionality")</span>
+                <span class="method-start">31643 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">40770 ms</span>
+                <span class="method-start">36185 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

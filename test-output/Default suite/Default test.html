@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 23 04:42:46 PDT 2025</td>
+<td>Started on:</td><td>Mon Sep 01 01:59:55 PDT 2025</td>
 </tr>
-<tr><td>Total time:</td><td>40 seconds (40932 ms)</td>
+<tr><td>Total time:</td><td>37 seconds (37347 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,79 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runners.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: runners.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User logout from the account created", "Delete Account functionality"</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;Automation Exercise[]&gt; but was:&lt;Automation Exercise[ - Signup / Login]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at stepDefinitions.loginStepDef.user_should_be_navigated_to_the_home_page(loginStepDef.java:52)
+	at ?.User should be navigated to the homePage(file:///C:/Users/Harsh/eclipse-workspace/BDDFramework/src/test/resources/features/logout_delete.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace80052821", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace80052821'><pre>junit.framework.ComparisonFailure: expected:&lt;Automation Exercise[]&gt; but was:&lt;Automation Exercise[ - Signup / Login]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at stepDefinitions.loginStepDef.user_should_be_navigated_to_the_home_page(loginStepDef.java:52)
+	at ?.User should be navigated to the homePage(file:///C:/Users/Harsh/eclipse-workspace/BDDFramework/src/test/resources/features/logout_delete.feature:8)
+</pre></div></td>
+<td>4</td>
+<td>runners.RunnerClass@5aebe890</td></tr>
+<tr>
+<td title='runners.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: runners.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User deletes the account created", "Delete Account functionality"</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;Automation Exercise[]&gt; but was:&lt;Automation Exercise[ - Signup / Login]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at stepDefinitions.loginStepDef.user_should_be_navigated_to_the_home_page(loginStepDef.java:52)
+	at ?.User should be navigated to the homePage(file:///C:/Users/Harsh/eclipse-workspace/BDDFramework/src/test/resources/features/logout_delete.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace411748515", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace411748515'><pre>junit.framework.ComparisonFailure: expected:&lt;Automation Exercise[]&gt; but was:&lt;Automation Exercise[ - Signup / Login]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at stepDefinitions.loginStepDef.user_should_be_navigated_to_the_home_page(loginStepDef.java:52)
+	at ?.User should be navigated to the homePage(file:///C:/Users/Harsh/eclipse-workspace/BDDFramework/src/test/resources/features/logout_delete.feature:8)
+</pre></div></td>
+<td>4</td>
+<td>runners.RunnerClass@5aebe890</td></tr>
+<tr>
+<td title='runners.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: runners.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User logins with valid details successfully", "Login Account functionality"</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;Automation Exercise[]&gt; but was:&lt;Automation Exercise[ - Signup / Login]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at stepDefinitions.loginStepDef.user_should_be_navigated_to_the_home_page(loginStepDef.java:52)
+	at ?.User should be navigated to the homePage(file:///C:/Users/Harsh/eclipse-workspace/BDDFramework/src/test/resources/features/login.feature:19)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2092870757", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2092870757'><pre>junit.framework.ComparisonFailure: expected:&lt;Automation Exercise[]&gt; but was:&lt;Automation Exercise[ - Signup / Login]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at stepDefinitions.loginStepDef.user_should_be_navigated_to_the_home_page(loginStepDef.java:52)
+	at ?.User should be navigated to the homePage(file:///C:/Users/Harsh/eclipse-workspace/BDDFramework/src/test/resources/features/login.feature:19)
+</pre></div></td>
+<td>3</td>
+<td>runners.RunnerClass@5aebe890</td></tr>
+<tr>
+<td title='runners.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: runners.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register a user with valid details", "User registration or sign up"</td>
+<td><div><pre>junit.framework.ComparisonFailure: expected:&lt;...on Exercise - Signup[]&gt; but was:&lt;...on Exercise - Signup[ / Login]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at stepDefinitions.registerStepDef.user_should_be_on_the_signup_page(registerStepDef.java:67)
+	at ?.User should be on the Signup page(file:///C:/Users/Harsh/eclipse-workspace/BDDFramework/src/test/resources/features/a_register.feature:9)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1225927567", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1225927567'><pre>junit.framework.ComparisonFailure: expected:&lt;...on Exercise - Signup[]&gt; but was:&lt;...on Exercise - Signup[ / Login]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at stepDefinitions.registerStepDef.user_should_be_on_the_signup_page(registerStepDef.java:67)
+	at ?.User should be on the Signup page(file:///C:/Users/Harsh/eclipse-workspace/BDDFramework/src/test/resources/features/a_register.feature:9)
+</pre></div></td>
+<td>15</td>
+<td>runners.RunnerClass@5aebe890</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,10 +149,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: runners.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register a user with valid details", "User registration or sign up"</td>
+<td title='runners.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: runners.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User logins with invalid details", "Login Account functionality"</td>
 <td></td>
-<td>38</td>
-<td>runners.RunnerClass@6ed3ccb2</td></tr>
+<td>6</td>
+<td>runners.RunnerClass@5aebe890</td></tr>
 </table><p>
 </body>
 </html>

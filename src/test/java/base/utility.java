@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class utility {
 	
 	WebDriver driver;
+	public static String email;
 	public utility(WebDriver driver) {
 		this.driver=driver;
 	}
@@ -28,6 +29,17 @@ public class utility {
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
+	
+	
+	    public static void generateRandomEmail() {
+	        // Generate random number between 1000–9999
+	        int randomNum = (int)(Math.random() * 10000);
+	        
+	        // Create unique email id
+	        email = "testuser" + randomNum + "@example.com";
+	       
+	    }
+	
 	
 	
 

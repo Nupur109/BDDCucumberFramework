@@ -21,6 +21,10 @@ public class baseClass {
 	public static ExtentTest log;
 
 	public void webDriverManager() throws IOException {
+		
+//		if (driver != null) {
+//			return;
+//		}
 
 		FileInputStream fis = new FileInputStream("src/test/resources/config/config.properties");
 		prop = new Properties();
@@ -43,30 +47,34 @@ public class baseClass {
 		}
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
 		driver.manage().deleteAllCookies();
-		log.info("Browser window maximized,implicit wait applied and all cookies deleted.");
+		if(log != null )log.info("Browser window maximized,implicit wait applied and all cookies deleted.");
 
 	}
 
 	public void generateExtentReports() {
-
-		ExtentSparkReporter report = new ExtentSparkReporter("reports/extent-report.html");
-		extent = new ExtentReports();
+		
+		ExtentSparkReporter report = new ExtentSparkReporter(System.getProperty("user.dir") + "/reports/extent-report.html");
+		report.config().setReportName("Automation Test Report");
+        report.config().setDocumentTitle("Cucumber Extent Report");
+        extent = new ExtentReports();
 		extent.attachReporter(report);
 
+		extent.setSystemInfo("Tester", "Nupur");
 	}
-	
-	 public void flushReport() {
-	        if (extent != null) {
-	            extent.flush();
-	        }
-	    }
-	
-	public void quitDriver() {
-		if (driver != null) {
+	 public void quitDriver() {
+			if (driver != null) {
 
-			driver.quit();	
+				driver.quit();	
+			}
 		}
-	}
+	
+//	 public void flushReport() {
+//	        if (extent != null) {
+//	            extent.flush();
+//	        }
+//	    }
 
+	
 }

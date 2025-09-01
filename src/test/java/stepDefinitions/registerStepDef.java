@@ -3,21 +3,20 @@ package stepDefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import junit.framework.Assert;
+import pageObjects.homePageObj;
 import pageObjects.loginPageObj;
 import pageObjects.signupPageObj;
 import io.cucumber.java.en.Then;
-import io.cucumber.datatable.DataTable;
-
-import java.time.Duration;
-
-import org.openqa.selenium.By;
 
 import base.baseClass;
+import base.utility;
 
 public class registerStepDef extends baseClass {
 
-	loginPageObj login;
-	signupPageObj signup;
+	homePageObj home= new homePageObj(driver);;
+	loginPageObj login= new loginPageObj(driver);	
+	signupPageObj signup= new signupPageObj(driver);
+	//utility util=new utility(driver);
 	
 
 	@Given("User navigates to the application url")
@@ -32,9 +31,9 @@ public class registerStepDef extends baseClass {
 
 	@When("User clicks on the Signup\\/login button")
 	public void user_clicks_on_the_signup_login_button() {
-
-		login = new loginPageObj(driver);
-		login.clickSignup_login();
+		
+		
+		home.clickSignup_login();
 		log.info("signup button is clicked");
 
 	}
@@ -48,8 +47,12 @@ public class registerStepDef extends baseClass {
 
 	@When("User enters Name and email in the Sign up section")
 	public void user_enters_and_in_the_sign_up_section() {
+		
+			
 		login.enterSignup_name(prop.getProperty("name"));
-		login.enterSignup_email(prop.getProperty("email"));
+		utility.generateRandomEmail();
+		String email= utility.email;
+		login.enterSignup_email(email);
 		log.info("name and email is entered");
 	}
 
@@ -67,7 +70,7 @@ public class registerStepDef extends baseClass {
 	@When("User enters the Account Information")
 	public void user_enters_the_account_information() {
 
-		signup = new signupPageObj(driver);
+		
 		signup.enterPassword(prop.getProperty("pwd"));
 		signup.enterFirst_Name(prop.getProperty("firstName"));
 		signup.enterLast_Name(prop.getProperty("lastname"));
@@ -106,8 +109,9 @@ public class registerStepDef extends baseClass {
 
 		String Acc_CreatedTitle = "Automation Exercise - Account Created";
 		Assert.assertEquals(Acc_CreatedTitle, driver.getTitle());
+		//driver.close();
 		
-		quitDriver();
+		
 	}
 
 }
